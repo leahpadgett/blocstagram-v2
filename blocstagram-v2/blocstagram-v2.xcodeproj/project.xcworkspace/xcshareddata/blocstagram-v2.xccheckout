@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>872A0C86-51F9-48D7-BC28-5D0B17EF7FF7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>653142BFD282D751DDF0304213BB18A37349B75D</key>
+		<string>github.com:leahpadgett/blocstagram-v2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>blocstagram-v2/blocstagram-v2.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>653142BFD282D751DDF0304213BB18A37349B75D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:leahpadgett/blocstagram-v2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>653142BFD282D751DDF0304213BB18A37349B75D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>653142BFD282D751DDF0304213BB18A37349B75D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>blocstagram-v2</string>
+		</dict>
+	</array>
+</dict>
+</plist>
