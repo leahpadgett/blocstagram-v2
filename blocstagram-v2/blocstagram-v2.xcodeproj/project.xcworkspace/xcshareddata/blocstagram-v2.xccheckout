@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>872A0C86-51F9-48D7-BC28-5D0B17EF7FF7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>blocstagram-v2</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>653142BFD282D751DDF0304213BB18A37349B75D</key>
 		<string>github.com:leahpadgett/blocstagram-v2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>blocstagram-v2/blocstagram-v2.xcodeproj/project.xcworkspace</string>
+	<string>blocstagram-v2/blocstagram-v2.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>653142BFD282D751DDF0304213BB18A37349B75D</key>
