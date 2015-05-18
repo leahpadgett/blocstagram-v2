@@ -11,6 +11,7 @@
 #import "Media.h"
 #import "User.h"
 #import "Comment.h"
+#import "MediaTableViewCell.h"
 
 @interface ImagesTableViewController ()
 
@@ -32,7 +33,7 @@
     [super viewDidLoad];
     
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"imageCell"];
+    [self.tableView registerClass:[MediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
 
     
     
@@ -59,28 +60,11 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
-    static NSInteger imageViewTag = 1234;
-    UIImageView *imageView = (UIImageView*)[cell.contentView viewWithTag:imageViewTag];
-    
-    if (!imageView) {
-   // This is a new cell, it doesn't have an image view yet
-   imageView = [[UIImageView alloc] init];
-    imageView.contentMode = UIViewContentModeScaleToFill;
-        
-    imageView.frame = cell.contentView.bounds;
-     imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        
-     imageView.tag = imageViewTag;
-    [cell.contentView addSubview:imageView];
-     }
-    
-    Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
-    imageView.image = item.image;
-
+    MediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
+    cell.mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
     
     return cell;
 }
@@ -89,7 +73,7 @@
     Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
     UIImage *image = item.image;
     
-    return image.size.height / image.size.width * CGRectGetWidth(self.view.frame);
+    return [MediaTableViewCell heightForMediaItem:item width:CGRectGetWidth(self.view.frame)];
     }
 
 
