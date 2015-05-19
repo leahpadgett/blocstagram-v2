@@ -23,6 +23,9 @@
 @property (nonatomic, strong) NSLayoutConstraint *usernameAndCaptionLabelHeightConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *commentLabelHeightConstraint;
 
+// Constraint property for assignment 29
+@property (nonatomic, strong) NSLayoutConstraint *imageWidthConstraint;
+
 @end
 
 static UIFont *lightFont;
@@ -91,6 +94,20 @@ static NSParagraphStyle *paragraphStyle;
                                   constant:100];
     self.imageHeightConstraint.identifier = @"Image height constraint";
     
+    // Assignment - Set images to 100x100 points
+    
+    self.imageWidthConstraint = [NSLayoutConstraint constraintWithItem:_mediaImageView
+                                                              attribute:NSLayoutAttributeWidth
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:nil
+                                                              attribute:NSLayoutAttributeNotAnAttribute
+                                                             multiplier:1
+                                                               constant:100];
+    self.imageWidthConstraint.identifier = @"Image width constraint";
+    
+    // End assignment
+    
+    
     self.usernameAndCaptionLabelHeightConstraint = [NSLayoutConstraint constraintWithItem:_usernameAndCaptionLabel
                                                                                                                         attribute:NSLayoutAttributeHeight
                                                                                                                                  relatedBy:NSLayoutRelationEqual
@@ -109,7 +126,7 @@ static NSParagraphStyle *paragraphStyle;
                                                                                                             constant:100];
     self.commentLabelHeightConstraint.identifier = @"Comment label height constraint";
     
-    [self.contentView addConstraints:@[self.imageHeightConstraint, self.usernameAndCaptionLabelHeightConstraint, self.commentLabelHeightConstraint]];
+    [self.contentView addConstraints:@[self.imageHeightConstraint, self.usernameAndCaptionLabelHeightConstraint, self.commentLabelHeightConstraint, self.imageWidthConstraint]];
     
     return self;
     }
@@ -202,6 +219,8 @@ static NSParagraphStyle *paragraphStyle;
 + (CGFloat) heightForMediaItem:(Media *)mediaItem width:(CGFloat)width {
     // Make a cell
     MediaTableViewCell *layoutCell = [[MediaTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"layoutCell"];
+    
+    [layoutCell setMediaItem:mediaItem];
     [layoutCell setNeedsLayout];
     [layoutCell layoutIfNeeded];
 
