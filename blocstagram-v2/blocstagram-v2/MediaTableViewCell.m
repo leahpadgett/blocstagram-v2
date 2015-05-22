@@ -212,6 +212,8 @@ static NSParagraphStyle *paragraphStyle;
     [layoutCell setMediaItem:mediaItem];
     [layoutCell setNeedsLayout];
     [layoutCell layoutIfNeeded];
+    
+    
 
     // Get the actual height required for the cell
     return CGRectGetMaxY(layoutCell.commentLabel.frame);

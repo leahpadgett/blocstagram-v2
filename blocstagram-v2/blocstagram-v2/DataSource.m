@@ -25,6 +25,8 @@
 - (void) deleteMediaItem:(Media *)item {
     NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
     [mutableArrayWithKVO removeObject:item];
+    
+    [self insertObject:item inMediaItemsAtIndex:0];
     }
 
 #pragma mark - Key/Value Observing
@@ -51,7 +53,11 @@
 
 - (void) replaceObjectInMediaItemsAtIndex:(NSUInteger)index withObject:(id)object {
     [_mediaItems replaceObjectAtIndex:index withObject:object];
+    
+    
     }
+
+
 
 + (instancetype) sharedInstance {
    static dispatch_once_t once;

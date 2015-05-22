@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		220272631B0A2F87009AFDB4 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 220272621B0A2F87009AFDB4 /* MediaTableViewCell.m */; };
+		220A4BB01B0F661D00E2D0E6 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220A4BAE1B0F661D00E2D0E6 /* Fabric.framework */; };
+		220A4BB11B0F661D00E2D0E6 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220A4BAF1B0F661D00E2D0E6 /* Crashlytics.framework */; };
 		22D490291AFC392A00D3ADAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D490281AFC392A00D3ADAF /* main.m */; };
 		22D4902C1AFC392A00D3ADAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D4902B1AFC392A00D3ADAF /* AppDelegate.m */; };
 		22D490341AFC392A00D3ADAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D490331AFC392A00D3ADAF /* Images.xcassets */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		220272611B0A2F87009AFDB4 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
 		220272621B0A2F87009AFDB4 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
+		220A4BAE1B0F661D00E2D0E6 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		220A4BAF1B0F661D00E2D0E6 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		22D490231AFC392A00D3ADAF /* blocstagram-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "blocstagram-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D490271AFC392A00D3ADAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22D490281AFC392A00D3ADAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				220A4BB11B0F661D00E2D0E6 /* Crashlytics.framework in Frameworks */,
+				220A4BB01B0F661D00E2D0E6 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +105,8 @@
 				22D490251AFC392A00D3ADAF /* blocstagram-v2 */,
 				22D4903F1AFC392B00D3ADAF /* blocstagram-v2Tests */,
 				22D490241AFC392A00D3ADAF /* Products */,
+				220A4BAE1B0F661D00E2D0E6 /* Fabric.framework */,
+				220A4BAF1B0F661D00E2D0E6 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +197,7 @@
 				22D4901F1AFC392A00D3ADAF /* Sources */,
 				22D490201AFC392A00D3ADAF /* Frameworks */,
 				22D490211AFC392A00D3ADAF /* Resources */,
+				220A4BAD1B0F65B900E2D0E6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -282,6 +291,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		220A4BAD1B0F65B900E2D0E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 97a5648de12b6c6b394d6038d2a551687fd4d7be b7793af637a047415ff3de8cd22ac1dac0b61685fc8bcce3ab6c3787ef841f62\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		22D4901F1AFC392A00D3ADAF /* Sources */ = {
@@ -415,6 +440,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "blocstagram-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +454,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "blocstagram-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
