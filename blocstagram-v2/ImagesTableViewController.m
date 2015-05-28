@@ -156,11 +156,12 @@
 
 #pragma mark - Remove observers
 
+/*
 - (void) dealloc
 {
     [[DataSource sharedInstance] removeObserver:self forKeyPath:@"mediaItems"];
 }
-
+*/
 
 
 
