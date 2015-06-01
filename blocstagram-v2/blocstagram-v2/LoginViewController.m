@@ -13,6 +13,7 @@
 
 @property (nonatomic, weak) UIWebView *webView;
 
+
 @end
 
 @implementation LoginViewController
@@ -89,6 +90,29 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
     
     return YES;
     }
+
+- (id) init
+{
+    UIButton* infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [infoButton addTarget:self action:@selector(showInfoView:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+    
+    [[self navigationItem] setTitle:@"Some Title"];
+    
+    return self;
+}
+
+UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                               initWithTitle:@"Back"
+                               style:UIBarButtonItemStylePlain
+                               target:self
+                               action:@selector(BackButtonPressed:)];
+self.navigationItem.leftBarButtonItem = backButton;
+
+- (void)BackButtonPressed:(id)sender
+{
+    
+}
 
 /*
 #pragma mark - Navigation
