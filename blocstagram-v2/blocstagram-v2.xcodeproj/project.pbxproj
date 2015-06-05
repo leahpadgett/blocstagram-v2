@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		220272631B0A2F87009AFDB4 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 220272621B0A2F87009AFDB4 /* MediaTableViewCell.m */; };
 		220A4BB41B1504AB00E2D0E6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220A4BB31B1504AB00E2D0E6 /* LoginViewController.m */; };
+		221677C61B20DDCB0087FD90 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221677C51B20DDCB0087FD90 /* MediaFullScreenViewController.m */; };
 		22D490291AFC392A00D3ADAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D490281AFC392A00D3ADAF /* main.m */; };
 		22D4902C1AFC392A00D3ADAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D4902B1AFC392A00D3ADAF /* AppDelegate.m */; };
 		22D490341AFC392A00D3ADAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D490331AFC392A00D3ADAF /* Images.xcassets */; };
@@ -48,6 +49,8 @@
 		220272621B0A2F87009AFDB4 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
 		220A4BB21B1504AB00E2D0E6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		220A4BB31B1504AB00E2D0E6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		221677C41B20DDCB0087FD90 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
+		221677C51B20DDCB0087FD90 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
 		22D490231AFC392A00D3ADAF /* blocstagram-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "blocstagram-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D490271AFC392A00D3ADAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22D490281AFC392A00D3ADAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				220A4BB31B1504AB00E2D0E6 /* LoginViewController.m */,
 				220272611B0A2F87009AFDB4 /* MediaTableViewCell.h */,
 				220272621B0A2F87009AFDB4 /* MediaTableViewCell.m */,
+				221677C41B20DDCB0087FD90 /* MediaFullScreenViewController.h */,
+				221677C51B20DDCB0087FD90 /* MediaFullScreenViewController.m */,
 				22D490671AFFA18400D3ADAF /* Media.h */,
 				22D490681AFFA18400D3ADAF /* Media.m */,
 				22D490641AFFA12500D3ADAF /* User.h */,
@@ -352,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221677C61B20DDCB0087FD90 /* MediaFullScreenViewController.m in Sources */,
 				22D490661AFFA12500D3ADAF /* User.m in Sources */,
 				22D4906C1AFFA1FD00D3ADAF /* Comment.m in Sources */,
 				220272631B0A2F87009AFDB4 /* MediaTableViewCell.m in Sources */,
