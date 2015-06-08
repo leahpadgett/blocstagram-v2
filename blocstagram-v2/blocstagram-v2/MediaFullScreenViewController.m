@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
 
+
 @end
 
 @implementation MediaFullScreenViewController
@@ -53,10 +54,13 @@
     self.doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapFired:)];
     self.doubleTap.numberOfTapsRequired = 2;
     
+
+    
     [self.tap requireGestureRecognizerToFail:self.doubleTap];
     
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
+    
     
 }
 
@@ -152,6 +156,7 @@
             [self.scrollView setZoomScale:self.scrollView.minimumZoomScale animated:YES];
             }
     }
+
 
 
 /*
