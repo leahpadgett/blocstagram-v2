@@ -9,6 +9,7 @@
 #import "MediaFullScreenViewController.h"
 #import "Media.h"
 
+
 @interface MediaFullScreenViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) Media *media;
