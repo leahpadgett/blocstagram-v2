@@ -178,6 +178,12 @@
     [self presentViewController:fullScreenVC animated:YES completion:nil];
     }
 
+- (void) didDblTapImageView:(Media *)mediaItem {
+    NSLog(@"in tableviewcontroller method");
+    mediaItem.image = nil;
+    [[DataSource sharedInstance] downloadImageForMediaItem:mediaItem];
+ }
+
 - (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView {
     NSMutableArray *itemsToShare = [NSMutableArray array];
     

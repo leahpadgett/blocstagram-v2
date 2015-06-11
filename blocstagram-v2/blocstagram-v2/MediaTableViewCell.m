@@ -25,6 +25,7 @@
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
+@property (nonatomic, strong) UITapGestureRecognizer *dblTapGestureRecognizer;
 @end
 
 static UIFont *lightFont;
@@ -64,6 +65,12 @@ static NSParagraphStyle *paragraphStyle;
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
         self.tapGestureRecognizer.delegate = self;
         [self.mediaImageView addGestureRecognizer:self.tapGestureRecognizer];
+        
+        self.dblTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dblTapFired:)];
+        self.dblTapGestureRecognizer.delegate = self;
+        [self.dblTapGestureRecognizer setNumberOfTouchesRequired:2];
+        [self.mediaImageView addGestureRecognizer:self.dblTapGestureRecognizer];
+        
         
         self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressFired:)];
         self.longPressGestureRecognizer.delegate = self;
@@ -131,6 +138,13 @@ static NSParagraphStyle *paragraphStyle;
 
 - (void) tapFired:(UITapGestureRecognizer *)sender {
     [self.delegate cell:self didTapImageView:self.mediaImageView];
+}
+
+
+- (void) dblTapFired:(UITapGestureRecognizer *)sender {
+    NSLog(@"gesture recognizer fired");
+    self.mediaImageView.image = nil;
+    [self.delegate didDblTapImageView:self.mediaItem];
 }
 
 - (void) longPressFired:(UILongPressGestureRecognizer *)sender {
