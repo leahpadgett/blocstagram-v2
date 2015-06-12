@@ -47,6 +47,8 @@
     return dataPath;
     }
 
+
+
 + (NSString *) instagramClientID {
     return @"78f4df6f726a42dd80c667e58dd44adb";
 }
@@ -99,6 +101,50 @@
                 }
             }];
         }
+    }
+
+#pragma mark - Liking Media Items
+
+- (void) toggleLikeOnMediaItem:(Media *)mediaItem withCompletionHandler:(void (^)(void))completionHandler {
+    NSString *urlString = [NSString stringWithFormat:@"media/%@/likes", mediaItem.idNumber];
+    NSDictionary *parameters = @{@"access_token": self.accessToken};
+    
+    if (mediaItem.likeState == LikeStateNotLiked) {
+        
+        mediaItem.likeState = LikeStateLiking;
+        
+        [self.instagramOperationManager POST:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            mediaItem.likeState = LikeStateLiked;
+            
+            if (completionHandler) {
+                completionHandler();
+                }
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                mediaItem.likeState = LikeStateNotLiked;
+                
+                if (completionHandler) {
+                    completionHandler();
+                    }
+                }];
+        
+        } else if (mediaItem.likeState == LikeStateLiked) {
+            
+            mediaItem.likeState = LikeStateUnliking;
+            
+            [self.instagramOperationManager DELETE:urlString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                mediaItem.likeState = LikeStateNotLiked;
+                
+                if (completionHandler) {
+                    completionHandler();
+                    }
+                } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                    mediaItem.likeState = LikeStateLiked;
+                    
+                    if (completionHandler) {
+                        completionHandler();
+                        }
+                    }];
+            }
     }
 
 #pragma mark - Key/Value Observing
