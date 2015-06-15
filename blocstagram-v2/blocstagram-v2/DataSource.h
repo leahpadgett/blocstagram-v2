@@ -29,6 +29,8 @@ typedef void (^NewItemCompletionBlock)(NSError *error);
 
 - (void) toggleLikeOnMediaItem:(Media *)mediaItem withCompletionHandler:(void (^)(void))completionHandler;
 
+- (void) commentOnMediaItem:(Media *)mediaItem withCommentText:(NSString *)commentText;
+
 + (NSString *) instagramClientID;
 
 @end
