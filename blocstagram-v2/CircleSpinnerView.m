@@ -31,11 +31,11 @@
         _circleLayer = [CAShapeLayer layer];
         _circleLayer.contentsScale = [[UIScreen mainScreen] scale];
         _circleLayer.frame = rect;
-        _circleLayer.fillColor = [UIColor clearColor].CGColor;
+        _circleLayer.fillColor = [UIColor purpleColor].CGColor;
         _circleLayer.strokeColor = self.strokeColor.CGColor;
         _circleLayer.lineWidth = self.strokeThickness;
-        _circleLayer.lineCap = kCALineCapRound;
-        _circleLayer.lineJoin = kCALineJoinBevel;
+        _circleLayer.lineCap = kCALineCapSquare;
+        _circleLayer.lineJoin = kCALineJoinMiter;
         _circleLayer.path = smoothedPath.CGPath;
         
         CALayer *maskLayer = [CALayer layer];
@@ -53,7 +53,7 @@
         animation.timingFunction = linearCurve;
         animation.removedOnCompletion = NO;
         animation.repeatCount = INFINITY;
-        animation.fillMode = kCAFillModeForwards;
+        animation.fillMode = kCAFillModeBackwards;
         animation.autoreverses = NO;
         [_circleLayer.mask addAnimation:animation forKey:@"rotate"];
         

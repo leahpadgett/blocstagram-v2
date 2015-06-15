@@ -28,7 +28,7 @@
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
 
 @property (nonatomic, strong) LikeButton *likeButton;
-
+@property (nonatomic, strong) UILabel *likesLabel;
 @end
 
 static UIFont *lightFont;
@@ -37,6 +37,8 @@ static UIColor *usernameLabelGray;
 static UIColor *commentLabelGray;
 static UIColor *linkColor;
 static NSParagraphStyle *paragraphStyle;
+static UIColor *likesLabelPurple;
+
 
 @implementation MediaTableViewCell
 
@@ -46,6 +48,8 @@ static NSParagraphStyle *paragraphStyle;
     usernameLabelGray = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1]; /*#eeeeee*/
     commentLabelGray = [UIColor colorWithRed:0.898 green:0.898 blue:0.898 alpha:1]; /*#e5e5e5*/
     linkColor = [UIColor colorWithRed:0.345 green:0.314 blue:0.427 alpha:1]; /*#58506d*/
+    likesLabelPurple = [UIColor colorWithRed:0.231 green:0 blue:0.141 alpha:1]; /*e7008d*/
+    
     
     NSMutableParagraphStyle *mutableParagraphStyle = [[NSMutableParagraphStyle alloc] init];
     mutableParagraphStyle.headIndent = 20.0;
@@ -85,7 +89,14 @@ static NSParagraphStyle *paragraphStyle;
         [self.likeButton addTarget:self action:@selector(likePressed:) forControlEvents:UIControlEventTouchUpInside];
         self.likeButton.backgroundColor = usernameLabelGray;
         
-        for (UIView *view in @[self.mediaImageView, self.usernameAndCaptionLabel, self.commentLabel, self.likeButton]) {
+        self.likesLabel = [[UILabel alloc] init];
+        self.likesLabel.numberOfLines = 0;
+        self.likesLabel.backgroundColor=[UIColor clearColor];
+        self.likesLabel.textColor =[UIColor purpleColor];
+        self.likesLabel.userInteractionEnabled=YES;
+        self.likesLabel.text= @"TEST";
+        
+        for (UIView *view in @[self.mediaImageView, self.usernameAndCaptionLabel, self.commentLabel, self.likeButton, self.likesLabel]) {
             [self.contentView addSubview:view];
             view.translatesAutoresizingMaskIntoConstraints = NO;
             }
@@ -265,6 +276,7 @@ static NSParagraphStyle *paragraphStyle;
     // Get the actual height required for the cell
     return CGRectGetMaxY(layoutCell.commentLabel.frame);
 }
+
 
 
 
