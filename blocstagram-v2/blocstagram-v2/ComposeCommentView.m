@@ -7,6 +7,7 @@
 //
 
 #import "ComposeCommentView.h"
+#import <UIKit/UIKit.h>
 
 @interface ComposeCommentView () <UITextViewDelegate>
 
@@ -150,11 +151,22 @@
     }
 
 
+// Assignment
 
 
-
-
-
+- (void)animateButton:(UIView*)view
+{
+    [UIView animateWithDuration:2
+                          delay:0.0
+         usingSpringWithDamping:1
+          initialSpringVelocity:1
+                        options:UIViewAnimationOptionRepeat
+                     animations:^
+     {
+         self.button.transform = CGAffineTransformIdentity;
+     }
+                     completion:nil];
+}
 
 
 
