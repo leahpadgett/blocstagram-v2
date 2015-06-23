@@ -144,4 +144,18 @@
     return image;
     }
 
+// Assignment
+
+- (void) imageByScalingToSize:(CGSize)size andCroppingWithRect:(CGRect)rect{
+    
+    
+    // #11
+    [self imageWithFixedOrientation];
+    [self imageResizedToMatchAspectRatioOfSize:size];
+    
+        
+    [self imageCroppedToRect:rect];
+
+}
+
 @end

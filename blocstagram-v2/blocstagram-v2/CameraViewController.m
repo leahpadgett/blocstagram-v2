@@ -272,26 +272,22 @@
             NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
             UIImage *image = [UIImage imageWithData:imageData scale:[UIScreen mainScreen].scale];
             
-        // #11
-            image = [image imageWithFixedOrientation];
-            image = [image imageResizedToMatchAspectRatioOfSize:self.captureVideoPreviewLayer.bounds.size];
-            
-        // #12
+            // #12
             UIView *leftLine = self.verticalLines.firstObject;
             UIView *rightLine = self.verticalLines.lastObject;
             UIView *topLine = self.horizontalLines.firstObject;
             UIView *bottomLine = self.horizontalLines.lastObject;
             
             CGRect gridRect = CGRectMake(CGRectGetMinX(leftLine.frame),
-                                                    CGRectGetMinY(topLine.frame),
-                                                    CGRectGetMaxX(rightLine.frame) - CGRectGetMinX(leftLine.frame),
-                                                    CGRectGetMinY(bottomLine.frame) - CGRectGetMinY(topLine.frame));
+                                         CGRectGetMinY(topLine.frame),
+                                         CGRectGetMaxX(rightLine.frame) - CGRectGetMinX(leftLine.frame),
+                                         CGRectGetMinY(bottomLine.frame) - CGRectGetMinY(topLine.frame));
             
             CGRect cropRect = gridRect;
             cropRect.origin.x = (CGRectGetMinX(gridRect) + (image.size.width - CGRectGetWidth(gridRect)) / 2);
             
-            image = [image imageCroppedToRect:cropRect];
-            
+            [image imageByScalingToSize:self.captureVideoPreviewLayer.bounds.size andCroppingWithRect:cropRect];
+
         // #13
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.delegate cameraViewController:self didCompleteWithImage:image];
