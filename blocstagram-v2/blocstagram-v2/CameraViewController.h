@@ -10,6 +10,8 @@
 
 @class CameraViewController;
 
+typedef void (^UIAlertCompletionBlock)(UIAlertAction *action);
+
 @protocol CameraViewControllerDelegate <NSObject>
 
 - (void) cameraViewController:(CameraViewController *)cameraViewController didCompleteWithImage:(UIImage *)image;

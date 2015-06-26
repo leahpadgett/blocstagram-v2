@@ -60,7 +60,19 @@
 - (void) cancelPressed:(UIBarButtonItem *)sender {
     [self.delegate cameraViewController:self didCompleteWithImage:nil];
     }
+#pragma mark - UIAlertView
 
+- (void) showAlertView:(NSString *)title alertMessage:(NSString *)message completionHandler:(UIAlertCompletionBlock)completionHandler{
+    
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertVC addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK button") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            if (completionHandler) {
+                completionHandler(nil);
+            }
+    }]];
+    [self presentViewController:alertVC animated:YES completion:nil];
+    NSLog(@"we rocked it!");
+}
 
 #pragma mark - Layout
 
@@ -108,12 +120,15 @@
                 NSError *error = nil;
                 AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
                 if (!input) {
-                    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:error.localizedDescription message:error.localizedRecoverySuggestion preferredStyle:UIAlertControllerStyleAlert];
-                    [alertVC addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK button") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+                    [self showAlertView:error.localizedDescription alertMessage:error.localizedRecoverySuggestion completionHandler:^(UIAlertAction *action) {
                         [self.delegate cameraViewController:self didCompleteWithImage:nil];
-                        }]];
+                    }];
+//                    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:error.localizedDescription message:error.localizedRecoverySuggestion preferredStyle:UIAlertControllerStyleAlert];
+//                    [alertVC addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK button") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+//                        [self.delegate cameraViewController:self didCompleteWithImage:nil];
+//                        }]];
                     
-                    [self presentViewController:alertVC animated:YES completion:nil];
+                    //[self presentViewController:alertVC animated:YES completion:nil];
                     } else {
                     // #7
                         

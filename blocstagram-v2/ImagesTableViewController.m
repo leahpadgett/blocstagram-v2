@@ -110,15 +110,15 @@
 - (void) cameraPressed:(UIBarButtonItem *) sender {
     UIViewController *imageVC;
     
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+   // if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         CameraViewController *cameraVC = [[CameraViewController alloc] init];
         cameraVC.delegate = self;
         imageVC = cameraVC;
-        } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
-            ImageLibraryViewController *imageLibraryVC = [[ImageLibraryViewController alloc] init];
-            imageLibraryVC.delegate = self;
-            imageVC = imageLibraryVC;
-            }
+//        } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
+//            ImageLibraryViewController *imageLibraryVC = [[ImageLibraryViewController alloc] init];
+//            imageLibraryVC.delegate = self;
+//            imageVC = imageLibraryVC;
+//            }
     
     if (imageVC) {
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:imageVC];
