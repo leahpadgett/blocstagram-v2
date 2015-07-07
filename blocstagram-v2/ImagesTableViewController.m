@@ -15,6 +15,7 @@
 #import "MediaFullScreenViewController.h"
 #import "CameraViewController.h"
 #import "ImageLibraryViewController.h"
+#import "PostToInstagramViewController.h"
 
 @interface ImagesTableViewController () <MediaTableViewCellDelegate, UIViewControllerTransitioningDelegate, CameraViewControllerDelegate, ImageLibraryViewControllerDelegate>
 
@@ -110,15 +111,15 @@
 - (void) cameraPressed:(UIBarButtonItem *) sender {
     UIViewController *imageVC;
     
-   // if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         CameraViewController *cameraVC = [[CameraViewController alloc] init];
         cameraVC.delegate = self;
         imageVC = cameraVC;
-//        } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
-//            ImageLibraryViewController *imageLibraryVC = [[ImageLibraryViewController alloc] init];
-//            imageLibraryVC.delegate = self;
-//            imageVC = imageLibraryVC;
-//            }
+        } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
+            ImageLibraryViewController *imageLibraryVC = [[ImageLibraryViewController alloc] init];
+            imageLibraryVC.delegate = self;
+            imageVC = imageLibraryVC;
+           }
     
     if (imageVC) {
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:imageVC];
@@ -128,25 +129,24 @@
     return;
 }
 
-- (void) cameraViewController:(CameraViewController *)cameraViewController didCompleteWithImage:(UIImage *)image {
-    [cameraViewController dismissViewControllerAnimated:YES completion:^{
-        if (image) {
-            NSLog(@"Got an image!");
-            } else {
-                NSLog(@"Closed without an image.");
+- (void) handleImage:(UIImage *)image withNavigationController:(UINavigationController *)nav {
+    if (image) {
+        PostToInstagramViewController *postVC = [[PostToInstagramViewController alloc] initWithImage:image];
+        
+        [nav pushViewController:postVC animated:YES];
+        } else {
+            [nav dismissViewControllerAnimated:YES completion:nil];
             }
-         }];
+    }
+
+
+- (void) cameraViewController:(CameraViewController *)cameraViewController didCompleteWithImage:(UIImage *)image {
+    [self handleImage:image withNavigationController:cameraViewController.navigationController];
     }
 
 
 - (void) imageLibraryViewController:(ImageLibraryViewController *)imageLibraryViewController didCompleteWithImage:(UIImage *)image {
-    [imageLibraryViewController dismissViewControllerAnimated:YES completion:^{
-        if (image) {
-            NSLog(@"Got an image!");
-            } else {
-                NSLog(@"Closed without an image.");
-                }
-         }];
+    [self handleImage:image withNavigationController:imageLibraryViewController.navigationController];
     }
 
 

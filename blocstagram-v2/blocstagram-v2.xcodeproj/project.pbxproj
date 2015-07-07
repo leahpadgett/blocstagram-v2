@@ -29,6 +29,7 @@
 		22D490691AFFA18400D3ADAF /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D490681AFFA18400D3ADAF /* Media.m */; };
 		22D4906C1AFFA1FD00D3ADAF /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D4906B1AFFA1FD00D3ADAF /* Comment.m */; };
 		22D4906F1AFFA26100D3ADAF /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D4906E1AFFA26100D3ADAF /* DataSource.m */; };
+		22DA1B891B41B748009A8F78 /* PostToInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DA1B881B41B748009A8F78 /* PostToInstagramViewController.m */; };
 		F722875DF978917151AF92A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7938BAE20174DDA8E17D5013 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,8 @@
 		22D4906B1AFFA1FD00D3ADAF /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		22D4906D1AFFA26100D3ADAF /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
 		22D4906E1AFFA26100D3ADAF /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		22DA1B871B41B748009A8F78 /* PostToInstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostToInstagramViewController.h; sourceTree = "<group>"; };
+		22DA1B881B41B748009A8F78 /* PostToInstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostToInstagramViewController.m; sourceTree = "<group>"; };
 		7938BAE20174DDA8E17D5013 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05D3DF79DAF07007A2FCFCB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +185,8 @@
 				221677C51B20DDCB0087FD90 /* MediaFullScreenViewController.m */,
 				22D490671AFFA18400D3ADAF /* Media.h */,
 				22D490681AFFA18400D3ADAF /* Media.m */,
+				22DA1B871B41B748009A8F78 /* PostToInstagramViewController.h */,
+				22DA1B881B41B748009A8F78 /* PostToInstagramViewController.m */,
 				221D8A8E1B35A7320080F52B /* UIImage+ImageUtilities.h */,
 				221D8A8F1B35A7320080F52B /* UIImage+ImageUtilities.m */,
 				22D490641AFFA12500D3ADAF /* User.h */,
@@ -374,6 +379,7 @@
 				22D490691AFFA18400D3ADAF /* Media.m in Sources */,
 				221D8A8A1B3334F00080F52B /* CameraToolbar.m in Sources */,
 				22D4902C1AFC392A00D3ADAF /* AppDelegate.m in Sources */,
+				22DA1B891B41B748009A8F78 /* PostToInstagramViewController.m in Sources */,
 				220A4BB41B1504AB00E2D0E6 /* LoginViewController.m in Sources */,
 				225E15F61B2B233200092CD8 /* LikeButton.m in Sources */,
 				22D4906F1AFFA26100D3ADAF /* DataSource.m in Sources */,

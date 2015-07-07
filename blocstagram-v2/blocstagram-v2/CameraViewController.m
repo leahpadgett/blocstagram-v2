@@ -46,6 +46,8 @@
     [self addViewsToViewHierarchy];
     [self setupImageCapture];
     [self createCancelButton];
+    
+    
     }
 
 

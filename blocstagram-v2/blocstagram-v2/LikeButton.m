@@ -48,7 +48,7 @@
 
 - (void) setLikeButtonState:(LikeState)likeState {
     _likeButtonState = likeState;
-    
+
     NSString *imageName;
     
     switch (_likeButtonState) {
