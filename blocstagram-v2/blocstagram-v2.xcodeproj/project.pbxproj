@@ -19,6 +19,7 @@
 		227568841B39BC1400B54573 /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227568831B39BC1400B54573 /* CropImageViewController.m */; };
 		227568871B39C15E00B54573 /* ImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227568861B39C15E00B54573 /* ImageLibraryViewController.m */; };
 		227E32C21B2A2E30005E64F0 /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 227E32C11B2A2E30005E64F0 /* CircleSpinnerView.m */; };
+		22AA6F2D1B5021DB00947AFF /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AA6F2C1B5021DB00947AFF /* UserTests.m */; };
 		22D490291AFC392A00D3ADAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D490281AFC392A00D3ADAF /* main.m */; };
 		22D4902C1AFC392A00D3ADAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D4902B1AFC392A00D3ADAF /* AppDelegate.m */; };
 		22D490341AFC392A00D3ADAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D490331AFC392A00D3ADAF /* Images.xcassets */; };
@@ -69,6 +70,7 @@
 		227568861B39C15E00B54573 /* ImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLibraryViewController.m; sourceTree = "<group>"; };
 		227E32C01B2A2E30005E64F0 /* CircleSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleSpinnerView.h; path = ../CircleSpinnerView.h; sourceTree = "<group>"; };
 		227E32C11B2A2E30005E64F0 /* CircleSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleSpinnerView.m; path = ../CircleSpinnerView.m; sourceTree = "<group>"; };
+		22AA6F2C1B5021DB00947AFF /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
 		22D490231AFC392A00D3ADAF /* blocstagram-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "blocstagram-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D490271AFC392A00D3ADAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22D490281AFC392A00D3ADAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				22D490421AFC392B00D3ADAF /* blocstagram_v2Tests.m */,
 				22D490401AFC392B00D3ADAF /* Supporting Files */,
+				22AA6F2C1B5021DB00947AFF /* UserTests.m */,
 			);
 			path = "blocstagram-v2Tests";
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22AA6F2D1B5021DB00947AFF /* UserTests.m in Sources */,
 				22D490431AFC392B00D3ADAF /* blocstagram_v2Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
