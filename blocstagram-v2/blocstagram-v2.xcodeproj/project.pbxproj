@@ -13,6 +13,14 @@
 		221D8A8A1B3334F00080F52B /* CameraToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D8A891B3334F00080F52B /* CameraToolbar.m */; };
 		221D8A8D1B34A3D40080F52B /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D8A8C1B34A3D40080F52B /* CameraViewController.m */; };
 		221D8A901B35A7320080F52B /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D8A8F1B35A7320080F52B /* UIImage+ImageUtilities.m */; };
+		225195731B5FE94F00819C13 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225195721B5FE94F00819C13 /* InterfaceController.m */; };
+		225195761B5FE94F00819C13 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225195751B5FE94F00819C13 /* NotificationController.m */; };
+		225195791B5FE94F00819C13 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225195781B5FE94F00819C13 /* GlanceController.m */; };
+		2251957B1B5FE94F00819C13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2251957A1B5FE94F00819C13 /* Images.xcassets */; };
+		2251957F1B5FE94F00819C13 /* blocstagram-v2 WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 2251957E1B5FE94F00819C13 /* blocstagram-v2 WatchKit App.app */; };
+		225195871B5FE94F00819C13 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225195851B5FE94F00819C13 /* Interface.storyboard */; };
+		225195891B5FE94F00819C13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225195881B5FE94F00819C13 /* Images.xcassets */; };
+		2251958C1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2251956C1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		225E15F61B2B233200092CD8 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 225E15F51B2B233200092CD8 /* LikeButton.m */; };
 		225E15F91B2F3E4F00092CD8 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 225E15F81B2F3E4F00092CD8 /* ComposeCommentView.m */; };
 		227568811B39B83800B54573 /* CropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 227568801B39B83800B54573 /* CropBox.m */; };
@@ -35,6 +43,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		225195801B5FE94F00819C13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22D4901B1AFC392A00D3ADAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2251957D1B5FE94F00819C13;
+			remoteInfo = "blocstagram-v2 WatchKit App";
+		};
+		2251958A1B5FE94F00819C13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22D4901B1AFC392A00D3ADAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2251956B1B5FE94F00819C13;
+			remoteInfo = "blocstagram-v2 WatchKit Extension";
+		};
 		22D4903D1AFC392B00D3ADAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22D4901B1AFC392A00D3ADAF /* Project object */;
@@ -43,6 +65,20 @@
 			remoteInfo = "blocstagram-v2";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		225195931B5FE94F00819C13 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2251958C1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0080F420546FC77958BD6560 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +94,20 @@
 		221D8A8C1B34A3D40080F52B /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		221D8A8E1B35A7320080F52B /* UIImage+ImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtilities.h"; sourceTree = "<group>"; };
 		221D8A8F1B35A7320080F52B /* UIImage+ImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtilities.m"; sourceTree = "<group>"; };
+		2251956C1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "blocstagram-v2 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2251956F1B5FE94F00819C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225195701B5FE94F00819C13 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		225195711B5FE94F00819C13 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		225195721B5FE94F00819C13 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		225195741B5FE94F00819C13 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		225195751B5FE94F00819C13 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		225195771B5FE94F00819C13 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		225195781B5FE94F00819C13 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		2251957A1B5FE94F00819C13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2251957E1B5FE94F00819C13 /* blocstagram-v2 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "blocstagram-v2 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		225195841B5FE94F00819C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225195861B5FE94F00819C13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		225195881B5FE94F00819C13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		225E15F41B2B233200092CD8 /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
 		225E15F51B2B233200092CD8 /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
 		225E15F71B2F3E4F00092CD8 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
@@ -98,6 +148,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		225195691B5FE94F00819C13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22D490201AFC392A00D3ADAF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +181,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2251956D1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				225195711B5FE94F00819C13 /* InterfaceController.h */,
+				225195721B5FE94F00819C13 /* InterfaceController.m */,
+				225195741B5FE94F00819C13 /* NotificationController.h */,
+				225195751B5FE94F00819C13 /* NotificationController.m */,
+				225195771B5FE94F00819C13 /* GlanceController.h */,
+				225195781B5FE94F00819C13 /* GlanceController.m */,
+				2251957A1B5FE94F00819C13 /* Images.xcassets */,
+				2251956E1B5FE94F00819C13 /* Supporting Files */,
+			);
+			path = "blocstagram-v2 WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		2251956E1B5FE94F00819C13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2251956F1B5FE94F00819C13 /* Info.plist */,
+				225195701B5FE94F00819C13 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		225195821B5FE94F00819C13 /* blocstagram-v2 WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				225195851B5FE94F00819C13 /* Interface.storyboard */,
+				225195881B5FE94F00819C13 /* Images.xcassets */,
+				225195831B5FE94F00819C13 /* Supporting Files */,
+			);
+			path = "blocstagram-v2 WatchKit App";
+			sourceTree = "<group>";
+		};
+		225195831B5FE94F00819C13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				225195841B5FE94F00819C13 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		227E32BF1B29C91E005E64F0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +236,8 @@
 			children = (
 				22D490251AFC392A00D3ADAF /* blocstagram-v2 */,
 				22D4903F1AFC392B00D3ADAF /* blocstagram-v2Tests */,
+				2251956D1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension */,
+				225195821B5FE94F00819C13 /* blocstagram-v2 WatchKit App */,
 				22D490241AFC392A00D3ADAF /* Products */,
 				B4ACB9F818B465283FF99938 /* Pods */,
 				0F988DDC0121A0B432CD24F4 /* Frameworks */,
@@ -148,6 +249,8 @@
 			children = (
 				22D490231AFC392A00D3ADAF /* blocstagram-v2.app */,
 				22D4903C1AFC392B00D3ADAF /* blocstagram-v2Tests.xctest */,
+				2251956C1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension.appex */,
+				2251957E1B5FE94F00819C13 /* blocstagram-v2 WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,6 +342,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2251956B1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225195921B5FE94F00819C13 /* Build configuration list for PBXNativeTarget "blocstagram-v2 WatchKit Extension" */;
+			buildPhases = (
+				225195681B5FE94F00819C13 /* Sources */,
+				225195691B5FE94F00819C13 /* Frameworks */,
+				2251956A1B5FE94F00819C13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				225195811B5FE94F00819C13 /* PBXTargetDependency */,
+			);
+			name = "blocstagram-v2 WatchKit Extension";
+			productName = "blocstagram-v2 WatchKit Extension";
+			productReference = 2251956C1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		2251957D1B5FE94F00819C13 /* blocstagram-v2 WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225195911B5FE94F00819C13 /* Build configuration list for PBXNativeTarget "blocstagram-v2 WatchKit App" */;
+			buildPhases = (
+				2251957C1B5FE94F00819C13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "blocstagram-v2 WatchKit App";
+			productName = "blocstagram-v2 WatchKit App";
+			productReference = 2251957E1B5FE94F00819C13 /* blocstagram-v2 WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		22D490221AFC392A00D3ADAF /* blocstagram-v2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22D490461AFC392B00D3ADAF /* Build configuration list for PBXNativeTarget "blocstagram-v2" */;
@@ -248,10 +384,12 @@
 				22D490201AFC392A00D3ADAF /* Frameworks */,
 				22D490211AFC392A00D3ADAF /* Resources */,
 				3979858212EF3D9C074124A9 /* Copy Pods Resources */,
+				225195931B5FE94F00819C13 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2251958B1B5FE94F00819C13 /* PBXTargetDependency */,
 			);
 			name = "blocstagram-v2";
 			productName = "blocstagram-v2";
@@ -285,6 +423,13 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Leah Padgett";
 				TargetAttributes = {
+					2251956B1B5FE94F00819C13 = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = UF3U66NFP6;
+					};
+					2251957D1B5FE94F00819C13 = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					22D490221AFC392A00D3ADAF = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = UF3U66NFP6;
@@ -310,11 +455,31 @@
 			targets = (
 				22D490221AFC392A00D3ADAF /* blocstagram-v2 */,
 				22D4903B1AFC392B00D3ADAF /* blocstagram-v2Tests */,
+				2251956B1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension */,
+				2251957D1B5FE94F00819C13 /* blocstagram-v2 WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2251956A1B5FE94F00819C13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2251957F1B5FE94F00819C13 /* blocstagram-v2 WatchKit App.app in Resources */,
+				2251957B1B5FE94F00819C13 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2251957C1B5FE94F00819C13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225195871B5FE94F00819C13 /* Interface.storyboard in Resources */,
+				225195891B5FE94F00819C13 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22D490211AFC392A00D3ADAF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +532,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		225195681B5FE94F00819C13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225195761B5FE94F00819C13 /* NotificationController.m in Sources */,
+				225195731B5FE94F00819C13 /* InterfaceController.m in Sources */,
+				225195791B5FE94F00819C13 /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22D4901F1AFC392A00D3ADAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +581,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		225195811B5FE94F00819C13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2251957D1B5FE94F00819C13 /* blocstagram-v2 WatchKit App */;
+			targetProxy = 225195801B5FE94F00819C13 /* PBXContainerItemProxy */;
+		};
+		2251958B1B5FE94F00819C13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2251956B1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension */;
+			targetProxy = 2251958A1B5FE94F00819C13 /* PBXContainerItemProxy */;
+		};
 		22D4903E1AFC392B00D3ADAF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 22D490221AFC392A00D3ADAF /* blocstagram-v2 */;
@@ -414,6 +599,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		225195851B5FE94F00819C13 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				225195861B5FE94F00819C13 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		22D490351AFC392A00D3ADAF /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -425,6 +618,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2251958D1B5FE94F00819C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "blocstagram-v2 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2251958E1B5FE94F00819C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "blocstagram-v2 WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2251958F1B5FE94F00819C13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = blocstagram_v2_WatchKit_Extension;
+				INFOPLIST_FILE = "blocstagram-v2 WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		225195901B5FE94F00819C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = blocstagram_v2_WatchKit_Extension;
+				INFOPLIST_FILE = "blocstagram-v2 WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		22D490441AFC392B00D3ADAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -570,6 +821,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		225195911B5FE94F00819C13 /* Build configuration list for PBXNativeTarget "blocstagram-v2 WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2251958F1B5FE94F00819C13 /* Debug */,
+				225195901B5FE94F00819C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		225195921B5FE94F00819C13 /* Build configuration list for PBXNativeTarget "blocstagram-v2 WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2251958D1B5FE94F00819C13 /* Debug */,
+				2251958E1B5FE94F00819C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		22D4901E1AFC392A00D3ADAF /* Build configuration list for PBXProject "blocstagram-v2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

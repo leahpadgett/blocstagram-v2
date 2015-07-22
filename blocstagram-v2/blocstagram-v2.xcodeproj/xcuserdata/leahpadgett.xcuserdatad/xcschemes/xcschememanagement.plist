@@ -3,9 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>Glance - blocstagram-v2 WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Notification - blocstagram-v2 WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>blocstagram-v2 WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2251957D1B5FE94F00819C13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>22D490221AFC392A00D3ADAF</key>
 		<dict>
 			<key>primary</key>
