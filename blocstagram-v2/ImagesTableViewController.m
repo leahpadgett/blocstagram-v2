@@ -17,6 +17,7 @@
 #import "ImageLibraryViewController.h"
 #import "PostToInstagramViewController.h"
 
+
 @interface ImagesTableViewController () <MediaTableViewCellDelegate, UIViewControllerTransitioningDelegate, CameraViewControllerDelegate, ImageLibraryViewControllerDelegate>
 
 @property (nonatomic, weak) UIView *lastSelectedCommentView;
@@ -57,6 +58,9 @@
         self.navigationItem.rightBarButtonItem = cameraButton;
         }
     
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(settingsPressed:)];
+    self.navigationItem.leftBarButtonItem = settingsButton;
+
     
     [[NSNotificationCenter defaultCenter] addObserver:self
         selector:@selector(keyboardWillShow:)
@@ -91,6 +95,16 @@
         [[DataSource sharedInstance] requestOldItemsWithCompletionHandler:nil];
         }
     }
+
+- (void) settingsPressed:(UIBarButtonItem *) sender {
+    //segue to SettingsStoryboard
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"SettingsStoryboard" bundle:nil];
+    //UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"settingsView"];
+    // vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"settingsViewController"];
+    [self presentViewController:vc animated:YES completion:NULL];
+
+}
 
 #pragma mark - UIScrollViewDelegate
 

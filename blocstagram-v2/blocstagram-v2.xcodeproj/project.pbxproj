@@ -13,6 +13,8 @@
 		221D8A8A1B3334F00080F52B /* CameraToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D8A891B3334F00080F52B /* CameraToolbar.m */; };
 		221D8A8D1B34A3D40080F52B /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D8A8C1B34A3D40080F52B /* CameraViewController.m */; };
 		221D8A901B35A7320080F52B /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D8A8F1B35A7320080F52B /* UIImage+ImageUtilities.m */; };
+		223EF3E21B6EB65600D8D3B4 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223EF3E11B6EB65600D8D3B4 /* SettingsStoryboard.storyboard */; };
+		223EF3E51B6EB6BE00D8D3B4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223EF3E41B6EB6BE00D8D3B4 /* SettingsViewController.m */; };
 		225195731B5FE94F00819C13 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225195721B5FE94F00819C13 /* InterfaceController.m */; };
 		225195761B5FE94F00819C13 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225195751B5FE94F00819C13 /* NotificationController.m */; };
 		225195791B5FE94F00819C13 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225195781B5FE94F00819C13 /* GlanceController.m */; };
@@ -94,6 +96,9 @@
 		221D8A8C1B34A3D40080F52B /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		221D8A8E1B35A7320080F52B /* UIImage+ImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtilities.h"; sourceTree = "<group>"; };
 		221D8A8F1B35A7320080F52B /* UIImage+ImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtilities.m"; sourceTree = "<group>"; };
+		223EF3E11B6EB65600D8D3B4 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		223EF3E31B6EB6BE00D8D3B4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = ../SettingsViewController.h; sourceTree = "<group>"; };
+		223EF3E41B6EB6BE00D8D3B4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = ../SettingsViewController.m; sourceTree = "<group>"; };
 		2251956C1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "blocstagram-v2 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2251956F1B5FE94F00819C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		225195701B5FE94F00819C13 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -234,6 +239,7 @@
 		22D4901A1AFC392A00D3ADAF = {
 			isa = PBXGroup;
 			children = (
+				223EF3E11B6EB65600D8D3B4 /* SettingsStoryboard.storyboard */,
 				22D490251AFC392A00D3ADAF /* blocstagram-v2 */,
 				22D4903F1AFC392B00D3ADAF /* blocstagram-v2Tests */,
 				2251956D1B5FE94F00819C13 /* blocstagram-v2 WatchKit Extension */,
@@ -292,6 +298,8 @@
 				22D490681AFFA18400D3ADAF /* Media.m */,
 				22DA1B871B41B748009A8F78 /* PostToInstagramViewController.h */,
 				22DA1B881B41B748009A8F78 /* PostToInstagramViewController.m */,
+				223EF3E31B6EB6BE00D8D3B4 /* SettingsViewController.h */,
+				223EF3E41B6EB6BE00D8D3B4 /* SettingsViewController.m */,
 				221D8A8E1B35A7320080F52B /* UIImage+ImageUtilities.h */,
 				221D8A8F1B35A7320080F52B /* UIImage+ImageUtilities.m */,
 				22D490641AFFA12500D3ADAF /* User.h */,
@@ -484,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223EF3E21B6EB65600D8D3B4 /* SettingsStoryboard.storyboard in Resources */,
 				22D490371AFC392A00D3ADAF /* LaunchScreen.xib in Resources */,
 				228F716F1B555967007E5986 /* Images.xcassets in Resources */,
 			);
@@ -552,6 +561,7 @@
 				22D490661AFFA12500D3ADAF /* User.m in Sources */,
 				227568871B39C15E00B54573 /* ImageLibraryViewController.m in Sources */,
 				227568811B39B83800B54573 /* CropBox.m in Sources */,
+				223EF3E51B6EB6BE00D8D3B4 /* SettingsViewController.m in Sources */,
 				22D4906C1AFFA1FD00D3ADAF /* Comment.m in Sources */,
 				227568841B39BC1400B54573 /* CropImageViewController.m in Sources */,
 				220272631B0A2F87009AFDB4 /* MediaTableViewCell.m in Sources */,
@@ -828,6 +838,7 @@
 				225195901B5FE94F00819C13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		225195921B5FE94F00819C13 /* Build configuration list for PBXNativeTarget "blocstagram-v2 WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -836,6 +847,7 @@
 				2251958E1B5FE94F00819C13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22D4901E1AFC392A00D3ADAF /* Build configuration list for PBXProject "blocstagram-v2" */ = {
 			isa = XCConfigurationList;
