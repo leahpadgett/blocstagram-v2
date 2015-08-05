@@ -13,5 +13,11 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
+@property (weak, nonatomic) IBOutlet UIPickerView *PostGoalpicker;
+
+
+- (IBAction)doneButton:(id)sender;
+
+
 
 @end

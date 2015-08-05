@@ -16,6 +16,7 @@
 #import "CameraViewController.h"
 #import "ImageLibraryViewController.h"
 #import "PostToInstagramViewController.h"
+#import "SettingsViewController.h"
 
 
 @interface ImagesTableViewController () <MediaTableViewCellDelegate, UIViewControllerTransitioningDelegate, CameraViewControllerDelegate, ImageLibraryViewControllerDelegate>
@@ -60,6 +61,8 @@
     
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(settingsPressed:)];
     self.navigationItem.leftBarButtonItem = settingsButton;
+    
+    
 
     
     [[NSNotificationCenter defaultCenter] addObserver:self

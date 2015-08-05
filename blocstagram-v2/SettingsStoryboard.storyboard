@@ -13,50 +13,72 @@
                         <viewControllerLayoutGuide type="bottom" id="5eE-fx-9Uj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JD8-XC-gg8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64l-Aa-Rvd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem prompt="Set Post Notifications" id="itG-2t-4Is"/>
-                                </items>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="74"/>
-                                </variation>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zoq-uH-qsw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Frequency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4os-0t-Pbo">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="11" width="42" height="21"/>
+                                    <rect key="frame" x="16" y="344" width="188" height="21"/>
+                                </variation>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yyx-3M-gR6">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="128" width="400" height="162"/>
+                                </variation>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Goal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdv-WU-VSC">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="99" width="188" height="21"/>
                                 </variation>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4y-V0-qde">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="126" width="400" height="162"/>
+                                    <rect key="frame" x="0.0" y="373" width="400" height="162"/>
                                 </variation>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ej-O2-ycI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="315" y="28" width="69" height="22"/>
+                                </variation>
+                                <connections>
+                                    <action selector="doneButton:" destination="sOd-Cz-3wT" eventType="touchUpInside" id="e7c-8k-uZK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="64l-Aa-Rvd"/>
-                                <exclude reference="Zoq-uH-qsw"/>
+                                <exclude reference="4os-0t-Pbo"/>
+                                <exclude reference="Yyx-3M-gR6"/>
+                                <exclude reference="Jdv-WU-VSC"/>
                                 <exclude reference="c4y-V0-qde"/>
+                                <exclude reference="9Ej-O2-ycI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="64l-Aa-Rvd"/>
-                                <include reference="Zoq-uH-qsw"/>
+                                <include reference="4os-0t-Pbo"/>
+                                <include reference="Yyx-3M-gR6"/>
+                                <include reference="Jdv-WU-VSC"/>
                                 <include reference="c4y-V0-qde"/>
+                                <include reference="9Ej-O2-ycI"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="PostGoalpicker" destination="Yyx-3M-gR6" id="N37-PQ-L0P"/>
                         <outlet property="picker" destination="c4y-V0-qde" id="aBo-DQ-iCk"/>
                     </connections>
                 </viewController>
