@@ -15,6 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet UIPickerView *PostGoalpicker;
 
+@property (strong, nonatomic) NSArray *pickerData;
+@property (strong, nonatomic) NSArray *PostGoalpickerData;
+
 
 - (IBAction)doneButton:(id)sender;
 

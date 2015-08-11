@@ -40,7 +40,7 @@
                                     <rect key="frame" x="16" y="99" width="188" height="21"/>
                                 </variation>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4y-V0-qde">
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4y-V0-qde">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="373" width="400" height="162"/>
@@ -54,6 +54,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="doneButton:" destination="sOd-Cz-3wT" eventType="touchUpInside" id="e7c-8k-uZK"/>
+                                    <segue destination="sOd-Cz-3wT" kind="custom" customClass="DismissSegue" id="n1h-Ac-Kdo"/>
                                 </connections>
                             </button>
                         </subviews>

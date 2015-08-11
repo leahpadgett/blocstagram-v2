@@ -13,6 +13,7 @@
 		221D8A8A1B3334F00080F52B /* CameraToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D8A891B3334F00080F52B /* CameraToolbar.m */; };
 		221D8A8D1B34A3D40080F52B /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D8A8C1B34A3D40080F52B /* CameraViewController.m */; };
 		221D8A901B35A7320080F52B /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D8A8F1B35A7320080F52B /* UIImage+ImageUtilities.m */; };
+		223489721B7974F800CFF464 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 223489711B7974F800CFF464 /* DismissSegue.m */; };
 		223EF3E21B6EB65600D8D3B4 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 223EF3E11B6EB65600D8D3B4 /* SettingsStoryboard.storyboard */; };
 		223EF3E51B6EB6BE00D8D3B4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223EF3E41B6EB6BE00D8D3B4 /* SettingsViewController.m */; };
 		225195731B5FE94F00819C13 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225195721B5FE94F00819C13 /* InterfaceController.m */; };
@@ -96,6 +97,8 @@
 		221D8A8C1B34A3D40080F52B /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		221D8A8E1B35A7320080F52B /* UIImage+ImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtilities.h"; sourceTree = "<group>"; };
 		221D8A8F1B35A7320080F52B /* UIImage+ImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtilities.m"; sourceTree = "<group>"; };
+		223489701B7974F800CFF464 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
+		223489711B7974F800CFF464 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
 		223EF3E11B6EB65600D8D3B4 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		223EF3E31B6EB6BE00D8D3B4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = ../SettingsViewController.h; sourceTree = "<group>"; };
 		223EF3E41B6EB6BE00D8D3B4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = ../SettingsViewController.m; sourceTree = "<group>"; };
@@ -300,6 +303,8 @@
 				22DA1B881B41B748009A8F78 /* PostToInstagramViewController.m */,
 				223EF3E31B6EB6BE00D8D3B4 /* SettingsViewController.h */,
 				223EF3E41B6EB6BE00D8D3B4 /* SettingsViewController.m */,
+				223489701B7974F800CFF464 /* DismissSegue.h */,
+				223489711B7974F800CFF464 /* DismissSegue.m */,
 				221D8A8E1B35A7320080F52B /* UIImage+ImageUtilities.h */,
 				221D8A8F1B35A7320080F52B /* UIImage+ImageUtilities.m */,
 				22D490641AFFA12500D3ADAF /* User.h */,
@@ -567,6 +572,7 @@
 				220272631B0A2F87009AFDB4 /* MediaTableViewCell.m in Sources */,
 				22D490691AFFA18400D3ADAF /* Media.m in Sources */,
 				221D8A8A1B3334F00080F52B /* CameraToolbar.m in Sources */,
+				223489721B7974F800CFF464 /* DismissSegue.m in Sources */,
 				22D4902C1AFC392A00D3ADAF /* AppDelegate.m in Sources */,
 				22DA1B891B41B748009A8F78 /* PostToInstagramViewController.m in Sources */,
 				220A4BB41B1504AB00E2D0E6 /* LoginViewController.m in Sources */,

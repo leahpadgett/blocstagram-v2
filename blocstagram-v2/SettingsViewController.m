@@ -10,25 +10,21 @@
 #import "ImagesTableViewController.h"
  
 @interface SettingsViewController ()
-{
-    NSArray *_pickerData;
-    NSArray *_PostGoalpickerData;
-}
-
-
-
 
 @end
 
 @implementation SettingsViewController
 
+
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
     //Initialize Data
-    _pickerData = @[ @[@"5 mins", @"10 mins", @"15 mins", @"20 mins"],
-                     @[@"1/2hr", @"1hr", @"2hrs"]];
+    _pickerData = @[@"5 mins", @"10 mins", @"15 mins", @"20 mins", @"1/2hr", @"1hr", @"2hrs", @"3hrs"];
     
     _PostGoalpickerData = @[@"1", @"2", @"3", @"4", @"5"];
     
@@ -49,29 +45,32 @@
 }
 
 // The number of columns of data
-- (long)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 2;
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+        return 1;
 }
-- (long)numberOfComponentsInPostGoalPickerView:(UIPickerView *)PostGoalpickerView{
+- (NSInteger)numberOfComponentsInPostGoalPickerView:(UIPickerView *)PostGoalpickerView{
     return 1;
 }
 
 // The number of rows of data
-- (long)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return _pickerData.count;
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    if (pickerView.tag == 1) {
+        return _pickerData.count;
+    }
+    else {
+        return _PostGoalpickerData.count;
+    }
 }
 
-- (long)PostGoalpickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return _PostGoalpickerData.count;
-}
 
 // The data to return for the row and component (column) that's being passed in
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return _pickerData[component][row];
-}
-
-- (NSString*)PostGoalpickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return _PostGoalpickerData[component][row];
+    if (pickerView.tag == 1) {
+        return _pickerData[row];
+    }
+    else {
+         return _PostGoalpickerData[row];
+    }
 }
 
 // Capture the picker view selection
