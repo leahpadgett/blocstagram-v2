@@ -74,14 +74,20 @@
 }
 
 // Capture the picker view selection
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    //This method is triggered whenever the user makes a change to the picker selection.
-    // The parameter named row and component represents what was selected.
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    if (pickerView.tag == 1) {
+        pickerView = ([_pickerData objectAtIndex:row]);
+        }
+    
+    else {
+        pickerView = ([_PostGoalpickerData objectAtIndex:row]);
+    }
 }
 
 - (IBAction)doneButton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 

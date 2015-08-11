@@ -30,6 +30,10 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="128" width="400" height="162"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="sOd-Cz-3wT" id="6RG-WS-8aT"/>
+                                    <outlet property="delegate" destination="sOd-Cz-3wT" id="QOf-EL-eU3"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Goal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdv-WU-VSC">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -45,6 +49,10 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="373" width="400" height="162"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="sOd-Cz-3wT" id="lx7-7g-EjK"/>
+                                    <outlet property="delegate" destination="sOd-Cz-3wT" id="njI-aa-h9J"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ej-O2-ycI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
