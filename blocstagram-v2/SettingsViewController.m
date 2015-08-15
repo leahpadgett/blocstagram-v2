@@ -11,17 +11,22 @@
  
 @interface SettingsViewController ()
 
+
+
 @end
 
 @implementation SettingsViewController
 
 
+-(void)viewWillAppear: (BOOL) animated {
+    NSUserDefaults *defaultsPicker = [NSUserDefaults standardUserDefaults];
+    _picker = [defaultsPicker objectForKey:@"picker"] ;
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
     
     //Initialize Data
     _pickerData = @[@"5 mins", @"10 mins", @"15 mins", @"20 mins", @"1/2hr", @"1hr", @"2hrs", @"3hrs"];
@@ -76,20 +81,18 @@
 // Capture the picker view selection
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
-    if (pickerView.tag == 1) {
-        pickerView = ([_pickerData objectAtIndex:row]);
-        }
-    
-    else {
-        pickerView = ([_PostGoalpickerData objectAtIndex:row]);
-    }
+    NSInteger selectedRow = [pickerView selectedRowInComponent:0];
+    [[NSUserDefaults standardUserDefaults] setInteger:selectedRow forKey:@"picker"];
 }
+
+
 
 - (IBAction)doneButton:(id)sender {
+   //[self dismissViewControllerAnimated:YES completion:nil];
     [self.navigationController popViewControllerAnimated:YES];
-    
+    NSInteger pickerRow = [[NSUserDefaults standardUserDefaults] integerForKey:@"picker"];
+    NSLog(@"%li", (long)pickerRow);
 }
-
 
 /*
 #pragma mark - Navigation

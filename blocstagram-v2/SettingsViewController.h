@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface SettingsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 
@@ -19,8 +20,8 @@
 @property (strong, nonatomic) NSArray *PostGoalpickerData;
 
 
-- (IBAction)doneButton:(id)sender;
 
+- (IBAction)doneButton:(id)sender;
 
 
 @end
