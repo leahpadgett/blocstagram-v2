@@ -18,10 +18,6 @@
 @implementation SettingsViewController
 
 
--(void)viewWillAppear: (BOOL) animated {
-    NSUserDefaults *defaultsPicker = [NSUserDefaults standardUserDefaults];
-    _picker = [defaultsPicker objectForKey:@"picker"] ;
-}
 
 - (void)viewDidLoad {
     
@@ -41,6 +37,12 @@
     self.PostGoalpicker.dataSource = self;
     self.PostGoalpicker.delegate = self;
 
+    //load saved data and set pickers to values
+    NSUserDefaults *defaultsPicker = [NSUserDefaults standardUserDefaults];
+    [self.picker selectRow:[defaultsPicker integerForKey:@"picker"] inComponent:0 animated:TRUE];
+    [self.PostGoalpicker selectRow:[defaultsPicker integerForKey:@"pickerTwo"] inComponent:0 animated:TRUE];
+    NSLog(@"[defaultsPicker objectForKey:@'picker'] - %ld",(long)[defaultsPicker integerForKey:@"picker"]);
+    NSLog(@"[defaultsPicker objectForKey:@'pickerTwo'] - %ld",(long)[defaultsPicker integerForKey:@"pickerTwo"]);
 }
 
 
@@ -80,18 +82,22 @@
 
 // Capture the picker view selection
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    
-    NSInteger selectedRow = [pickerView selectedRowInComponent:0];
-    [[NSUserDefaults standardUserDefaults] setInteger:selectedRow forKey:@"picker"];
+    if (pickerView.tag == 1) {
+        NSLog(@"row: %ld, _pickerData[row]: %@",(long)row,_pickerData[row]);
+        [[NSUserDefaults standardUserDefaults] setInteger:row forKey:@"picker"];
+    }
+    else {
+         NSLog(@"row: %ld, _PostGoalpickerData[row]: %@",(long)row,_PostGoalpickerData[row]);
+        [[NSUserDefaults standardUserDefaults] setInteger:row forKey:@"pickerTwo"];
+    }
 }
 
 
 
 - (IBAction)doneButton:(id)sender {
    //[self dismissViewControllerAnimated:YES completion:nil];
+    //save data from pickers to choosen store
     [self.navigationController popViewControllerAnimated:YES];
-    NSInteger pickerRow = [[NSUserDefaults standardUserDefaults] integerForKey:@"picker"];
-    NSLog(@"%li", (long)pickerRow);
 }
 
 /*
