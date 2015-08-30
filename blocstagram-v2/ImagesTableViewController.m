@@ -445,6 +445,8 @@
         } completion:nil];
     }
 
+#pragma mark - Method for time of day
+
 
 
 /*
