@@ -12,4 +12,6 @@
 
 - (instancetype) initWithImage:(UIImage *)sourceImage;
 
+@property (nonatomic, assign) int sendCount;
+
 @end

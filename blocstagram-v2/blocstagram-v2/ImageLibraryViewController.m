@@ -11,7 +11,7 @@
 #import "CropImageViewController.h"
 
 
-@interface ImageLibraryViewController ()
+@interface ImageLibraryViewController () <CropImageViewControllerDelegate>
 
 @property (nonatomic, strong) PHFetchResult *result;
 
@@ -161,6 +161,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:PHImageManagerMaximumSize contentMode:PHImageContentModeDefault options:options resultHandler:^(UIImage *resultImage, NSDictionary *info)
             {
             CropImageViewController *cropVC = [[CropImageViewController alloc] initWithImage:resultImage];
+                cropVC.delegate = self;
             [self.navigationController pushViewController:cropVC animated:YES];
             }];
     
