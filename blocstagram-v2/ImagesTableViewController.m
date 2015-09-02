@@ -76,6 +76,13 @@
         object:nil];
     
     
+    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+    NSNumber* postGoal = [userDefaults objectForKey:@"postGoal"];
+    NSInteger postCount = [userDefaults integerForKey:@"postCount"];
+    NSDate* lastPostDate = [userDefaults objectForKey:@"postDate"];
+    NSLog(@"Here");
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

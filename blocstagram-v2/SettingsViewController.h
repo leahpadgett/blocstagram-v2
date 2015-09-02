@@ -17,7 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *PostGoalpicker;
 
 @property (strong, nonatomic) NSArray *pickerData;
-@property (strong, nonatomic) NSArray *PostGoalpickerData;
+@property (strong, nonatomic) NSArray *postGoalpickerData;
+@property (strong, nonatomic) NSArray *frequencyData;
 
 
 

@@ -376,8 +376,20 @@
         alertVC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"No Instagram App", nil) message:NSLocalizedString(@"Add a caption and send your image in the Instagram app.", @"send image instructions") preferredStyle:UIAlertControllerStyleAlert];
         
         [alertVC addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK button") style:UIAlertActionStyleCancel handler:nil]];
-        _sendCount++;
-        NSLog(@"%i", _sendCount);
+        self.sendCount++;
+        
+        NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+        NSNumber* postGoal = [userDefaults objectForKey:@"postGoal"];
+        NSInteger postCount = [userDefaults integerForKey:@"postCount"];
+        
+        if (postCount < [postGoal integerValue]) {
+            postCount++;
+            [userDefaults setInteger:postCount forKey:@"postCount"];
+            [userDefaults setObject:[NSDate date] forKey:@"postDate"];
+            [userDefaults synchronize];
+        }
+        
+        NSLog(@"%i", self.sendCount);
         
     }
     
